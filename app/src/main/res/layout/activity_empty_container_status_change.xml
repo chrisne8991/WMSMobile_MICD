@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EmptyContainerStatusChangeActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/empty_container_status_change"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/empty_container_status_change" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/container_number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/container_number" />
+    <EditText
+        android:id="@+id/EmptyContainerStatusChange_txtContainerNr"
+        android:layout_width="match_parent"
+        android:layout_height= "40dp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_edittext" />
+    <TextView
+        android:id="@+id/EmptyContainerStatusChange_lblShippingLine"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Shipping Line: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/status"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/status" />
+    <Spinner
+        android:id="@+id/EmptyContainerStatusChange_cbStatus"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/comments"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/comments" />
+    <EditText
+        android:id="@+id/EmptyContainerStatusChange_txtComments"
+        android:layout_width="match_parent"
+        android:layout_height= "40dp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="text"
+        android:background="@drawable/rounded_edittext" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/CargoDispatchSugarBags2_btnBack"
+            android:nextFocusRight="@+id/CargoDispatchSugarBags2_btnBack"
+            android:nextFocusUp="@+id/CargoDispatchSugarBags2_btnBack"
+            android:nextFocusDown="@+id/CargoDispatchSugarBags2_btnBack"
+            android:nextFocusForward="@+id/CargoDispatchSugarBags2_btnBack"
+            android:onClick="btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/CargoDispatchSugarBags2_btnNext"
+            android:nextFocusRight="@+id/CargoDispatchSugarBags2_btnNext"
+            android:nextFocusUp="@+id/CargoDispatchSugarBags2_btnNext"
+            android:nextFocusDown="@+id/CargoDispatchSugarBags2_btnNext"
+            android:nextFocusForward="@+id/CargoDispatchSugarBags2_btnNext"
+            android:onClick="btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

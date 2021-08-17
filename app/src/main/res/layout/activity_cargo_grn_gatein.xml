@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CargoGRNGateInActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cargo_goodsreceipt_gate_in_document_lookup_lblMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="@string/cargo_goods_receipt"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/cargo_goods_receipt" />
+
+        <TextView
+            android:id="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/gate_in_document_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_goodsreceipt_gate_in_document_lookup_lblMainMenu"
+            tools:text="@string/gate_in_document_number" />
+
+        <Spinner
+            android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_cbDocumentNr"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintTop_toTopOf="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/document_info"
+            app:layout_constraintEnd_toEndOf="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_goods_receipt_gate_in_document_lookup_lblDocumentNr"
+            tools:text="@string/document_info" />
+
+        <TextView
+            android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_txtDocumentInfo"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:enabled="true"
+            android:gravity="start|top"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/grn_btnBack"
+                android:nextFocusRight="@+id/grn_btnBack"
+                android:nextFocusUp="@+id/grn_btnBack"
+                android:nextFocusDown="@+id/grn_btnBack"
+                android:nextFocusForward="@+id/grn_btnBack"
+                android:onClick="CargoGoodsReceiptGateInDocumentLookup_btnBack_Clicked"
+                android:text="@string/back"
+
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/grn_btnNext"
+                android:nextFocusRight="@+id/grn_btnNext"
+                android:nextFocusUp="@+id/grn_btnNext"
+                android:nextFocusDown="@+id/grn_btnNext"
+                android:nextFocusForward="@+id/grn_btnNext"
+                android:onClick="CargoGoodsReceiptGateInDocumentLookup_btnNext_Clicked"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

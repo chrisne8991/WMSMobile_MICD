@@ -1,0 +1,247 @@
+package za.co.winfreight.wmsmobile_micd;
+
+import android.Manifest;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class LoadEmptyContainerDetailsActivity extends AppCompatActivity {
+    //Leave the following code alone {
+    private static final int PERMISSION_CODE = 1000;
+    private static final int IMAGE_CAPTURE_CODE = 1001;
+    Uri imageUri;
+    String _pictureType;
+    //}
+
+    boolean photoContainer1;
+    boolean photoContainer2;
+    boolean photoTruckReg;
+    boolean photoYardClerk;
+    EditText txt;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_load_empty_container_details);
+
+        photoContainer1=false;
+        photoContainer2=false;
+        photoTruckReg=false;
+        photoYardClerk=false;
+
+        txt = findViewById(+R.id.LoadEmptyContainerDetailsActivity_txtGateInNumber);
+    }
+
+    public void btn_Clicked(View v){
+        String buttonTag = v.getTag().toString();
+        switch (buttonTag){
+            case "btn1":{
+                _pictureType = "ContainerPhoto1";
+                break;
+            }
+            case "btn2":{
+                _pictureType = "ContainerPhoto2";
+                break;
+            }
+            case "btn3":{
+                _pictureType = "TruckRegistration";
+                break;
+            }
+            case "btn4":{
+                _pictureType = "YardClerk";
+                break;
+            }
+            default:{
+                return;
+            }
+        }
+        takePhoto(_pictureType);
+    }
+    public void btnBack_Clicked(View v){
+        Intent intent = new Intent(this, LoadEmptyContainerActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    public void btnNext_Clicked(View v){
+        if (!photoContainer1){
+            Toast.makeText(this,"Please supply 1st container photo",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!photoContainer2){
+            Toast.makeText(this,"Please supply 2nd container photo",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!photoTruckReg){
+            Toast.makeText(this,"Please supply truck reg photo",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!photoYardClerk){
+            Toast.makeText(this,"Please supply yard clerk photo",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (txt.getText() == null) {
+            Toast.makeText(this, "Please supply gate in number", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (txt.getText().toString().equals("")){
+            Toast.makeText(this,"Please supply gate in number",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        queryDispatch q = new queryDispatch(getApplicationContext());
+        EmptyContainerLoadingClass emptyContainerLoadingClass = ((master)getApplicationContext()).get_emptyContainerLoading();
+
+        String ContainerNr = emptyContainerLoadingClass.getContainerNr();
+        String ContainerNr2 = emptyContainerLoadingClass.getContainerNr2();
+        String DocumentNr = emptyContainerLoadingClass.getPadNr();
+        String GateInNumber = emptyContainerLoadingClass.getGateInDocumentNr();
+        String UserName = emptyContainerLoadingClass.getUserName();
+
+        tblErrorMessage errorMessage = q.setECLDetails(DocumentNr,ContainerNr,UserName,GateInNumber);
+
+        Toast.makeText(this,errorMessage.getMsg(),Toast.LENGTH_SHORT).show();
+
+        if (errorMessage.getErrorCode() == 0){
+            if (!ContainerNr2.equals("")){
+                if (!ContainerNr2.equals("None")) {
+                    q.setECLDetails(DocumentNr,ContainerNr2,UserName,GateInNumber);
+                }
+            }
+            Intent intent = new Intent(this, ProgramActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+    }
+
+
+    //Call takePhoto to take the bloody photo.
+    //Add the result of what should happen once the picture has been taken here{
+    public void afterPhotoTakenAction(){
+        //will only execute if successful
+        Button btn;
+        switch (_pictureType){
+            case "ContainerPhoto1":{
+                btn = findViewById(R.id.LoadEmptyContainerDetailsActivity_btn1);
+                photoContainer1=true;
+                break;
+            }
+            case "ContainerPhoto2":{
+                btn = findViewById(R.id.LoadEmptyContainerDetailsActivity_btn2);
+                photoContainer2=true;
+                break;
+            }
+            case "TruckRegistration":{
+                btn = findViewById(R.id.LoadEmptyContainerDetailsActivity_btn3);
+                photoTruckReg=true;
+                break;
+            }
+            case "YardClerk":{
+                btn = findViewById(R.id.LoadEmptyContainerDetailsActivity_btn4);
+                photoYardClerk=true;
+                break;
+            }
+            default:{
+                return;
+            }
+        }
+        btn.setBackground(getDrawable(R.drawable.rounded_button_press));
+    }
+    //}
+    //Leave the following code alone{
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int [] grantResults){
+        if (requestCode == PERMISSION_CODE)
+        {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                openCamera();
+            }
+            else{
+                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    private void openCamera(){
+        ContentValues values = new ContentValues();
+        values.put(MediaStore.Images.Media.TITLE,"New Picture");
+        values.put(MediaStore.Images.Media.DESCRIPTION,"From the Camera");
+        imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+        startActivityForResult(cameraIntent,IMAGE_CAPTURE_CODE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (_pictureType.equals("")) return;
+        if (resultCode == RESULT_OK){
+            //we can get the image from the imageUri
+            try{
+                InputStream iStream =   getContentResolver().openInputStream(imageUri);
+                if (iStream == null) return;
+
+                byte[] inputData = getBytes(iStream);
+
+                EmptyContainerLoadingClass myECL = ((master)getApplicationContext()).get_emptyContainerLoading();
+                String DocumentNr = myECL.getPadNr();
+                String Container = myECL.getContainerNr();
+                String UserName = ((master)getApplicationContext()).getUser();
+                queryDispatch q = new queryDispatch(getApplicationContext());
+                tblErrorMessage errorMessage = q.UploadECLPicture(DocumentNr, Container, UserName,_pictureType, inputData);
+                String Container2 = myECL.getContainerNr2();
+                Toast.makeText(this,errorMessage.getMsg(),Toast.LENGTH_SHORT).show();
+                if (!Container2.equals("")){
+                    if (!Container2.equals("None")){
+                        q.UploadECLPicture(DocumentNr, Container2, UserName,_pictureType, inputData);
+                    }
+                }
+                afterPhotoTakenAction();
+            }catch(IOException ignored){
+            }
+        }
+    }
+    public byte[] getBytes(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+        int bufferSize = 1024;
+        byte[] buffer = new byte[bufferSize];
+
+        int len;
+        while ((len = inputStream.read(buffer)) != -1) {
+            byteBuffer.write(buffer, 0, len);
+        }
+        return byteBuffer.toByteArray();
+    }
+    public void takePhoto(String pictureType){
+        if (pictureType.equals("")) return;
+        _pictureType = pictureType;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+            {
+                String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                requestPermissions(permission, PERMISSION_CODE);
+            }
+            else{
+                openCamera();
+            }
+        }
+        else{
+            openCamera();
+        }
+    }
+    //}
+}

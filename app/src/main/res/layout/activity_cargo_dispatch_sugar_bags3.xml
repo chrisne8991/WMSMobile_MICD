@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".CargoDispatchSugarBags3">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:text="@string/cargo_goods_dispatch"
+    android:textAlignment="center"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="@string/cargo_goods_dispatch" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:text="@string/take_photo"
+    android:textAlignment="center"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="@string/take_photo" />
+
+<Button
+    android:id="@+id/CargoDispatch3_btn1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_button"
+    android:gravity="center"
+    android:text="@string/photo_packed_container_both_doors_open"
+    android:textColor="@android:color/white"
+    android:tag="btn1"
+    android:onClick="btn_Clicked"
+    android:textStyle="bold" />
+<Button
+    android:id="@+id/CargoDispatch3_btn2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_button"
+    android:gravity="center"
+    android:text="@string/photo_packed_container_one_door_open"
+    android:textColor="@android:color/white"
+    android:tag="btn2"
+    android:onClick="btn_Clicked"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/CargoDispatch3_btn3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_button"
+    android:gravity="center"
+    android:text="@string/photo_packed_container_both_doors_closed"
+    android:textColor="@android:color/white"
+    android:tag="btn3"
+    android:onClick="btn_Clicked"
+    android:textStyle="bold" />
+<Button
+    android:id="@+id/CargoDispatch3_btn4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_button"
+    android:gravity="center"
+    android:text="@string/yard_clerk"
+    android:textColor="@android:color/white"
+    android:visibility="invisible"
+    android:tag="btn4"
+    android:onClick="btn_Clicked"
+    android:textStyle="bold" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginEnd="1dp"
+    android:gravity="bottom"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/CargoDispatch1_btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:nextFocusLeft="@+id/CargoDispatch1_btnBack"
+        android:nextFocusRight="@+id/CargoDispatch1_btnBack"
+        android:nextFocusUp="@+id/CargoDispatch1_btnBack"
+        android:nextFocusDown="@+id/CargoDispatch1_btnBack"
+        android:nextFocusForward="@+id/CargoDispatch1_btnBack"
+        android:onClick="btnBack_Clicked"
+        android:text="@string/back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/CargoDispatch1_btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:nextFocusLeft="@+id/CargoDispatch1_btnNext"
+        android:nextFocusRight="@+id/CargoDispatch1_btnNext"
+        android:nextFocusUp="@+id/CargoDispatch1_btnNext"
+        android:nextFocusDown="@+id/CargoDispatch1_btnNext"
+        android:nextFocusForward="@+id/CargoDispatch1_btnNext"
+        android:onClick="btnNext_Clicked"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</LinearLayout>
+</LinearLayout>

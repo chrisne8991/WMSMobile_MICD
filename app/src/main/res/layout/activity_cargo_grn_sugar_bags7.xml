@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoGrnSugarBags7">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_receipt"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_receipt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/any_cargo_wet"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/any_cargo_wet" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/CargoGrnSugarBags7_rbYes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/yes"/>
+        <RadioButton
+            android:id="@+id/CargoGrnSugarBags7_rbNo"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:text="@string/no"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/CargoGrnSugarBags7_llHowMany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/how_many_bags"
+            tools:text="@string/how_many_bags"/>
+        <EditText
+            android:id="@+id/CargoGrnSugarBags7_txtNumberOfBags"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="number"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/CargoGrnSugarBags7_lblTakePhotoPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/take_photo_item"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/take_photo_item" />
+
+
+    <Button
+        android:id="@+id/CargoGrnSugarBags7_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="CargoGrnSugarBags7_btn_Clicked"
+        android:tag="CargoGrnSugarBags7_btn1"
+        android:text="@string/photo_item"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="@string/photo_item" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CargoGrnSugarBags7_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnBack"
+            android:nextFocusRight="@+id/grn_btnBack"
+            android:nextFocusUp="@+id/grn_btnBack"
+            android:nextFocusDown="@+id/grn_btnBack"
+            android:nextFocusForward="@+id/grn_btnBack"
+            android:onClick="CargoGrnSugarBags7_btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CargoGrnSugarBags7_btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnNext"
+            android:nextFocusRight="@+id/grn_btnNext"
+            android:nextFocusUp="@+id/grn_btnNext"
+            android:nextFocusDown="@+id/grn_btnNext"
+            android:nextFocusForward="@+id/grn_btnNext"
+            android:onClick="CargoGrnSugarBags7_btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

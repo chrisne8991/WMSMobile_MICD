@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CargoDispatchActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/cargo_goodsdispatch_btnMineraldispatchBags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="CargoGoodsdispatch_btnMineraldispatchBags_Clicked"
+            android:text="@string/mineral_receipt_bags"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_goodsdispatch_btnMineraldispatchLooseBulk"
+            tools:text="@string/mineral_receipt_bags" />
+
+        <Button
+            android:id="@+id/cargo_goodsdispatch_btnMineraldispatchLooseBulk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="CargoGoodsdispatch_btnMineraldispatchLooseBulk_Clicked"
+            android:text="@string/mineral_receipt_loose_bulk"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_goodsdispatch_btnScanSugarBags"
+            tools:text="@string/mineral_receipt_loose_bulk" />
+
+        <Button
+            android:id="@+id/cargo_goodsdispatch_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@+id/putaway_btnBack"
+            android:nextFocusRight="@+id/putaway_btnBack"
+            android:nextFocusUp="@+id/putaway_btnBack"
+            android:nextFocusDown="@+id/putaway_btnBack"
+            android:nextFocusForward="@+id/putaway_btnBack"
+            android:onClick="CargoGoodsdispatch_btnBack_Clicked"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/cargo_goodsdispatch_btnScanSugarBags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="CargoGoodsdispatch_btnScanSugarBags_Clicked"
+            android:text="@string/scan_sugar_bags"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_goodsdispatch_lblMainMenu"
+            tools:text="@string/scan_sugar_bags" />
+
+        <TextView
+            android:id="@+id/cargo_goodsdispatch_lblMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="@string/cargo_goods_dispatch_main_menu"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/cargo_goods_dispatch_main_menu" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

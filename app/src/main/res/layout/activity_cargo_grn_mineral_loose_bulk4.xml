@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoGrnMineralLooseBulk4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_receipt"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_receipt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/any_cargo_moisture"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/any_cargo_moisture" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/CargoGrnMineralLooseBulk4_rbYes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/yes"/>
+        <RadioButton
+            android:id="@+id/CargoGrnMineralLooseBulk4_rbNo"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:text="@string/no"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/CargoGrnMineralLooseBulk4_lblTakePhotoPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/take_photo_item"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/take_photo_item" />
+
+
+    <Button
+        android:id="@+id/CargoGrnMineralLooseBulk4_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="CargoGrnMineralLooseBulk4_btn_Clicked"
+        android:tag="CargoGrnMineralLooseBulk4_btn1"
+        android:text="@string/photo_item"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="@string/photo_item" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CargoGrnMineralLooseBulk4_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnBack"
+            android:nextFocusRight="@+id/grn_btnBack"
+            android:nextFocusUp="@+id/grn_btnBack"
+            android:nextFocusDown="@+id/grn_btnBack"
+            android:nextFocusForward="@+id/grn_btnBack"
+            android:onClick="CargoGrnMineralLooseBulk4_btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CargoGrnMineralLooseBulk4_btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnNext"
+            android:nextFocusRight="@+id/grn_btnNext"
+            android:nextFocusUp="@+id/grn_btnNext"
+            android:nextFocusDown="@+id/grn_btnNext"
+            android:nextFocusForward="@+id/grn_btnNext"
+            android:onClick="CargoGrnMineralLooseBulk4_btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

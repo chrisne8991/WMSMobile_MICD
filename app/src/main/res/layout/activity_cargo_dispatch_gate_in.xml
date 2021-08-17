@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CargoDispatchGateInActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cargo_dispatch_gate_in_document_lookup_lblMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="@string/dispatch"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/dispatch" />
+
+        <TextView
+            android:id="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/gate_in_document_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_gate_in_document_lookup_lblMainMenu"
+            tools:text="@string/gate_in_document_number" />
+
+        <Spinner
+            android:id="@+id/CargoDispatchGateInDocumentLookup_cbDocumentNr"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintTop_toTopOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr" />
+
+        <TextView
+            android:id="@+id/CargoDispatchGateIn_lblDocumentNr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/container_info"
+            app:layout_constraintEnd_toEndOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            tools:text="@string/container_info" />
+
+        <TextView
+            android:id="@+id/CargoDispatchGateInDocumentLookup_txtDocumentInfo"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:enabled="true"
+            android:gravity="start|top"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CargoDispatchGateIn_lblDocumentNr" />
+
+
+        <Button
+            android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+            android:nextFocusRight="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+            android:nextFocusUp="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+            android:nextFocusDown="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+            android:nextFocusForward="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+            android:onClick="CargoDispatchGateInDocumentLookup_btnContinue_Clicked"
+            android:text="@string/string_continue"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/CargoDispatchGateInDocumentLookup_txtDocumentInfo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:nextFocusRight="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:nextFocusUp="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:nextFocusDown="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:nextFocusForward="@+id/CargoGoodsReceiptGateInDocumentLookup_btnBack"
+                android:onClick="CargoDispatchGateInDocumentLookup_btnBack_Clicked"
+                android:text="@string/back"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:nextFocusRight="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:nextFocusUp="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:nextFocusDown="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:nextFocusForward="@+id/CargoGoodsReceiptGateInDocumentLookup_btnNext"
+                android:onClick="CargoDispatchGateInDocumentLookup_btnNext_Clicked"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/CargoDispatchGateIn_lblContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="23dp"
+            android:text="@string/container_number"
+            app:layout_constraintBottom_toTopOf="@+id/CargoDispatchGateIn_lblDocumentNr"
+            app:layout_constraintEnd_toEndOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_gate_in_document_lookup_lblDocumentNr"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@string/container_number" />
+
+        <Spinner
+            android:id="@+id/CargoDispatchGateIn_cbContainer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/CargoDispatchGateIn_lblContainer"
+            app:layout_constraintStart_toStartOf="@+id/CargoDispatchGateInDocumentLookup_cbDocumentNr"
+            app:layout_constraintTop_toBottomOf="@+id/CargoDispatchGateInDocumentLookup_cbDocumentNr" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

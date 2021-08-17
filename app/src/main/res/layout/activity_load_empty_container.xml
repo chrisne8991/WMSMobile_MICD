@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoadEmptyContainerActivity">
+
+    <TextView
+        android:id="@+id/LoadEmptyContainer_lblMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/load_empty_container"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="@string/load_empty_container" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/LoadEmptyContainer_lblDocumentNr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gate_in_document_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LoadEmptyContainer_lblMainMenu"
+            tools:text="@string/gate_in_document_number" />
+
+        <Spinner
+            android:id="@+id/LoadEmptyContainer_cbDocumentNr"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>.
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/container_number"
+            tools:text="@string/container_number" />
+        <Spinner
+            android:layout_weight="1"
+            android:id="@+id/LoadEmptyContainer_cbContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/container_number"
+            tools:text="@string/container_number" />
+        <Spinner
+            android:id="@+id/LoadEmptyContainer_cbContainer2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/container_info"
+        tools:text="@string/container_info" />
+
+        <TextView
+            android:id="@+id/LoadEmptyContainer_txtDocumentInfo"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:enabled="true"
+            android:gravity="start|top"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LoadEmptyContainer_lblContainerNr" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/LoadEmptyContainer_btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/LoadEmptyContainer_btnBack"
+                android:nextFocusRight="@+id/LoadEmptyContainer_btnBack"
+                android:nextFocusUp="@+id/LoadEmptyContainer_btnBack"
+                android:nextFocusDown="@+id/LoadEmptyContainer_btnBack"
+                android:nextFocusForward="@+id/LoadEmptyContainer_btnBack"
+                android:onClick="btnBack_Clicked"
+                android:text="@string/back"
+
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/LoadEmptyContainer_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/LoadEmptyContainer_btnNext"
+                android:nextFocusRight="@+id/LoadEmptyContainer_btnNext"
+                android:nextFocusUp="@+id/LoadEmptyContainer_btnNext"
+                android:nextFocusDown="@+id/LoadEmptyContainer_btnNext"
+                android:nextFocusForward="@+id/LoadEmptyContainer_btnNext"
+                android:onClick="btnNext_Clicked"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+ </LinearLayout>

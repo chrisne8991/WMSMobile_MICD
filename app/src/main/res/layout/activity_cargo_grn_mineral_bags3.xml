@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoGrnMineralBags3">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_receipt"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_receipt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/weigh_bags"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/weigh_bags" />
+
+    <LinearLayout
+        android:id="@+id/CargoGrnMineralBags3_llHowMany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/how_many_bags"
+            tools:text="@string/how_many_bags"/>
+        <EditText
+            android:id="@+id/CargoGrnMineralBags3_txtNumberOfBags"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="number"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/bag_nr"
+            android:textAlignment="textEnd"
+            tools:text="@string/bag_nr" />
+        <TextView
+            android:id="@+id/CargoGrnMineralBags3_lblBagNr"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:text="1"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/weight"
+            tools:text="@string/weight"/>
+        <EditText
+            android:id="@+id/CargoGrnMineralBags3_txtWeight"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="numberDecimal"
+            android:text="0.00"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_weight"
+            tools:text="@string/total_weight"/>
+        <TextView
+            android:id="@+id/CargoGrnMineralBags3_txtTotalWeight"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="18sp"
+            android:text="0.00"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_bags"
+            tools:text="@string/total_bags"/>
+        <TextView
+            android:id="@+id/CargoGrnMineralBags3_txtTotalCount"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="18sp"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CargoGrnMineralBags3_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnBack"
+            android:nextFocusRight="@+id/grn_btnBack"
+            android:nextFocusUp="@+id/grn_btnBack"
+            android:nextFocusDown="@+id/grn_btnBack"
+            android:nextFocusForward="@+id/grn_btnBack"
+            android:onClick="CargoGrnMineralBags3_btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CargoGrnMineralBags3_btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnNext"
+            android:nextFocusRight="@+id/grn_btnNext"
+            android:nextFocusUp="@+id/grn_btnNext"
+            android:nextFocusDown="@+id/grn_btnNext"
+            android:nextFocusForward="@+id/grn_btnNext"
+            android:onClick="CargoGrnMineralBags3_btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

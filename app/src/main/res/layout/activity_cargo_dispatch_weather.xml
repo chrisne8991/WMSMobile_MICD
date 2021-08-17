@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CargoDispatchWeatherActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/cargo_dispatch_weather_lblWeatherConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/weather_condition"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cargo_dispatch_weather_chkCloudy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/weather_condition" />
+
+        <CheckBox
+            android:id="@+id/cargo_dispatch_weather_chkCloudy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/cloudy"
+            app:layout_constraintBottom_toTopOf="@+id/cargo_dispatch_weather_chkRain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_weather_lblWeatherConditions"
+            tools:text="@string/cloudy" />
+
+        <CheckBox
+            android:id="@+id/cargo_dispatch_weather_chkRain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/rain"
+            app:layout_constraintBottom_toTopOf="@+id/cargo_dispatch_weather_chkSnow"
+            app:layout_constraintStart_toStartOf="@+id/cargo_dispatch_weather_chkCloudy"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_weather_chkCloudy"
+            tools:text="@string/rain" />
+
+        <CheckBox
+            android:id="@+id/cargo_dispatch_weather_chkSnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/snow"
+            app:layout_constraintBottom_toTopOf="@+id/cargo_dispatch_weather_chkSunny"
+            app:layout_constraintStart_toStartOf="@+id/cargo_dispatch_weather_chkRain"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_weather_chkRain"
+            tools:text="@string/snow" />
+
+        <CheckBox
+            android:id="@+id/cargo_dispatch_weather_chkSunny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/sunny"
+            app:layout_constraintBottom_toTopOf="@+id/cargo_dispatch_weather_chkWindy"
+            app:layout_constraintStart_toStartOf="@+id/cargo_dispatch_weather_chkSnow"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_weather_chkSnow"
+            tools:text="@string/sunny" />
+
+        <CheckBox
+            android:id="@+id/cargo_dispatch_weather_chkWindy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/Windy"
+            app:layout_constraintStart_toStartOf="@+id/cargo_dispatch_weather_chkSunny"
+            app:layout_constraintTop_toBottomOf="@+id/cargo_dispatch_weather_chkSunny"
+            tools:text="@string/Windy" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/CargoDispatchWeather_btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/grn_btnBack"
+                android:nextFocusRight="@+id/grn_btnBack"
+                android:nextFocusUp="@+id/grn_btnBack"
+                android:nextFocusDown="@+id/grn_btnBack"
+                android:nextFocusForward="@+id/grn_btnBack"
+                android:onClick="CargoDispatchWeather_btnBack_Clicked"
+                android:text="@string/back"
+
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/CargoDispatchWeather_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:nextFocusLeft="@+id/grn_btnNext"
+                android:nextFocusRight="@+id/grn_btnNext"
+                android:nextFocusUp="@+id/grn_btnNext"
+                android:nextFocusDown="@+id/grn_btnNext"
+                android:nextFocusForward="@+id/grn_btnNext"
+                android:onClick="CargoDispatchWeather_btnNext_Clicked"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

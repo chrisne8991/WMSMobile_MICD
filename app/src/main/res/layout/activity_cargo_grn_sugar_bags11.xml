@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoGrnSugarBags11">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_receipt"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_receipt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/take_photo"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/take_photo" />
+
+    <Button
+        android:id="@+id/CargoGrnSugarBags11_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/forklift_driver"
+        tools:text="@string/forklift_driver"
+        android:textColor="@android:color/white"
+        android:tag="CargoGrnSugarBags11_btn1"
+        android:onClick="CargoGrnSugarBags11_btn_Clicked"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/CargoGrnSugarBags11_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/whs_tally_clerk"
+        tools:text="@string/whs_tally_clerk"
+        android:textColor="@android:color/white"
+        android:tag="CargoGrnSugarBags11_btn2"
+        android:onClick="CargoGrnSugarBags11_btn_Clicked"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CargoGrnSugarBags11_txtGrnNr"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/comments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/CargoGrnSugarBags11_txtComments"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content"
+        android:textAlignment="textStart"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/rounded_edittext" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CargoGrnSugarBags11_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnBack"
+            android:nextFocusRight="@+id/grn_btnBack"
+            android:nextFocusUp="@+id/grn_btnBack"
+            android:nextFocusDown="@+id/grn_btnBack"
+            android:nextFocusForward="@+id/grn_btnBack"
+            android:onClick="CargoGrnSugarBags11_btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CargoGrnSugarBags11__btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnNext"
+            android:nextFocusRight="@+id/grn_btnNext"
+            android:nextFocusUp="@+id/grn_btnNext"
+            android:nextFocusDown="@+id/grn_btnNext"
+            android:nextFocusForward="@+id/grn_btnNext"
+            android:onClick="CargoGrnSugarBags11_btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

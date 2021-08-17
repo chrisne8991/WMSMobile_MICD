@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProgramActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/wms_logo" />
+
+    <TextView
+        android:id="@+id/program_lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/main_menu"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/program_lblWarehouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:text="@string/warehouse"
+            tools:text="@string/warehouse" />
+
+        <Spinner
+            android:id="@+id/program_cbWarehouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/program_btnGrn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnGRN_Clicked"
+        android:text="@string/cargo_goods_receipt"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/cargo_goods_receipt"
+         />
+
+    <Button
+        android:id="@+id/program_btnOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnDispatch_Clicked"
+        android:text="@string/cargo_goods_dispatch"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/cargo_goods_dispatch"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnLoadEmptyContainer_Clicked"
+        android:text="@string/load_empty_container"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/load_empty_container"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnEmptyContainerStatusChange_Clicked"
+        android:text="@string/empty_container_status_change"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/empty_container_status_change"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnDispatchEmptyContaienrLoading_Clicked"
+        android:text="@string/dispatch_empty_container_loading"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/dispatch_empty_container_loading"
+        android:visibility="gone"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:onClick="program_btnDTransferContainer_Clicked"
+        android:text="@string/transfer_container"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="@string/transfer_container"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/program_btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:onClick="program_btnExit_Clicked"
+            android:text="@string/exit"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

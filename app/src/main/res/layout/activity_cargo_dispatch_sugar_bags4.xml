@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoDispatchSugarBags4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_dispatch"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_dispatch" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/take_photo"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/take_photo" />
+
+    <Button
+        android:id="@+id/CargoDispatchSugarBags4_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/container_with_seals"
+        android:textColor="@android:color/white"
+        android:tag="btn1"
+        android:onClick="btn_Clicked"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/CargoDispatchSugarBags4_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/tally_clerk"
+        android:textColor="@android:color/white"
+        android:tag="btn2"
+        android:onClick="btn_Clicked"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/seal1"
+            tools:text="@string/seal1"/>
+        <EditText
+            android:id="@+id/CargoDispatchSugarBags4_txtSeal1"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="text"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+        <Button
+            android:id="@+id/CargoDispatchSugarBags4_btnSeal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/seal1"
+            android:textColor="@android:color/white"
+            android:tag="btn3"
+            android:onClick="btn_Clicked"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/seal2"
+            tools:text="@string/seal2"/>
+        <EditText
+            android:id="@+id/CargoDispatchSugarBags4_txtSeal2"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="text"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+        <Button
+            android:id="@+id/CargoDispatchSugarBags4_btnSeal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/seal2"
+            android:textColor="@android:color/white"
+            android:tag="btn4"
+            android:onClick="btn_Clicked"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/seal3"
+            tools:text="@string/seal3"/>
+        <EditText
+            android:id="@+id/CargoDispatchSugarBags4_txtSeal3"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="text"
+            android:text="0"
+            android:background="@drawable/rounded_edittext" />
+        <Button
+            android:id="@+id/CargoDispatchSugarBags4_btnSeal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/seal3"
+            android:textColor="@android:color/white"
+            android:tag="btn5"
+            android:onClick="btn_Clicked"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/comments"
+            tools:text="@string/comments"/>
+        <EditText
+            android:id="@+id/CargoDispatchSugarBags4_txtComments"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="text"
+            android:text=""
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CargoDispatch1_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/CargoDispatch1_btnBack"
+            android:nextFocusRight="@+id/CargoDispatch1_btnBack"
+            android:nextFocusUp="@+id/CargoDispatch1_btnBack"
+            android:nextFocusDown="@+id/CargoDispatch1_btnBack"
+            android:nextFocusForward="@+id/CargoDispatch1_btnBack"
+            android:onClick="btnBack_Clicked"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/CargoDispatch1_btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/CargoDispatch1_btnNext"
+            android:nextFocusRight="@+id/CargoDispatch1_btnNext"
+            android:nextFocusUp="@+id/CargoDispatch1_btnNext"
+            android:nextFocusDown="@+id/CargoDispatch1_btnNext"
+            android:nextFocusForward="@+id/CargoDispatch1_btnNext"
+            android:onClick="btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

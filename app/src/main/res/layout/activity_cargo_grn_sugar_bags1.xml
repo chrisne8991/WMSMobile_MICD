@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CargoGrnSugarBags1">
+
+    <TextView
+        android:id="@+id/cargo_goodsreceipt_gate_in_document_lookup_lblMainMenu2"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/cargo_goods_receipt"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/cargo_goods_receipt" />
+
+    <TextView
+        android:id="@+id/carcoGrnSugarBags1_lblInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/take_photo"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/take_photo" />
+
+    <Button
+        android:id="@+id/cargoGrnSugarBags1_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/truck_registration"
+        android:textColor="@android:color/white"
+        android:tag="cargoGrnSugarBags1_btn1"
+        android:onClick="cargoGrnSugarBags1_btn_Clicked"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/cargoGrnSugarBags1_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/take_photo_of_vehicle"
+        android:textColor="@android:color/white"
+        android:tag="cargoGrnSugarBags1_btn2"
+        android:onClick="cargoGrnSugarBags1_btn_Clicked"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/cargoGrnSugarBags1_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="cargoGrnSugarBags1_btn_Clicked"
+        android:tag="cargoGrnSugarBags1_btn3"
+        android:text="@string/tarp_right_side"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/cargoGrnSugarBags1_btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="cargoGrnSugarBags1_btn_Clicked"
+        android:tag="cargoGrnSugarBags1_btn4"
+        android:text="@string/tarp_left_side"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/cargoGrnSugarBags1_btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="cargoGrnSugarBags1_btn_Clicked"
+        android:tag="cargoGrnSugarBags1_btn5"
+        android:text="@string/tarp_top_side"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cargoGrnSugarBags1_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnBack"
+            android:nextFocusRight="@+id/grn_btnBack"
+            android:nextFocusUp="@+id/grn_btnBack"
+            android:nextFocusDown="@+id/grn_btnBack"
+            android:nextFocusForward="@+id/grn_btnBack"
+            android:onClick="cargoGrnSugarBags1_btnBack_Clicked"
+            android:text="@string/back"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cargoGrnSugarBags1__btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:nextFocusLeft="@+id/grn_btnNext"
+            android:nextFocusRight="@+id/grn_btnNext"
+            android:nextFocusUp="@+id/grn_btnNext"
+            android:nextFocusDown="@+id/grn_btnNext"
+            android:nextFocusForward="@+id/grn_btnNext"
+            android:onClick="cargoGrnSugarBags1_btnNext_Clicked"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
